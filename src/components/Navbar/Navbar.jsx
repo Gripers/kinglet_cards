@@ -1,9 +1,9 @@
-import { useContext, useState } from 'react';
+import {useContext, useState} from 'react';
 import styles from './Navbar.module.scss';
 
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
-import { Context } from '../../context';
+import {Context} from '../../context';
 import logo from '../../assets/images/logo.png';
 
 const Navbar = () => {
