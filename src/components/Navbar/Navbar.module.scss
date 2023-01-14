@@ -1,0 +1,43 @@
+.navbar__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vh;
+
+  .navbar__logo {
+    width: 50%;
+
+    img {
+      width: 150px;
+      height: 70px;
+    }
+  }
+
+  .navbar__links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    button {
+      width: 200px;
+      border: 2px solid white;
+      border-radius: 60px;
+      background-color: transparent;
+      color: white;
+      padding: 8px 15px;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
