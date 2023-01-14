@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Footer.scss"
 import {Link} from "react-router-dom";
-import logo from "../../assets/images/logo.jpg"
+import logo from "../../assets/images/logo.png"
 
 const Footer = () => {
     return (
@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="footer_over">
                     <div className="footer_texts">
                         <div className="footer-address">
-                            <h1>Get in Touch with KingletCards</h1>
+                            <h3>Get in Touch with KingletCards</h3>
                             <p>6210 Watford Dr League City, TX 77573</p>
                         </div>
                         <div className="footer-email">

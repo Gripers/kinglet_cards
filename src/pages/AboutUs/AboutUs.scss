@@ -34,3 +34,24 @@
         }
     }
 }
+
+@media only screen and (max-width: 900px) {
+    .about-over {
+        .container {
+            width: 98%;
+            margin: 0 auto;
+            .about-all {
+                h3 {
+                    font-size: 40px;
+                    margin: 5% 0;
+                }
+                .about-texts {
+                    h2 {
+                        font-size: 32px;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
