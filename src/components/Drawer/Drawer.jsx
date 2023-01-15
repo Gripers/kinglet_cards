@@ -11,8 +11,7 @@ const Drawer = () => {
       open={isDrawerOpen}
       direction='right'
       onClose={() => setIsDrawerOpen(false)}
-    >
-    </EZDrawer>
+    ></EZDrawer>
   );
 };
 

@@ -1,0 +1,30 @@
+.testimonials__wrapper {
+  max-width: 1100px;
+  text-align: center;
+  margin: 50px auto 0 auto;
+
+  .testimonials__carousel {
+    margin-top: 26px;
+
+    .testimonials__carousel_item {
+      border-radius: 12px;
+      background-color: white;
+      padding: 20px 20px 40px;
+
+      p {
+        color: black;
+        font-size: 17px;
+      }
+    }
+
+    button {
+      width: auto;
+      display: table;
+      border: 2px solid white;
+      border-radius: 12px;
+      background-color: black;
+      margin: -20px auto 0;
+      padding: 10px 35px;
+    }
+  }
+}

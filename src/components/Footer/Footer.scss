@@ -1,132 +1,131 @@
 .footer_div {
-    background: #000000;
-    height: 460px;
-    padding-top: 3rem;
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        .footer_over {
-            display: flex;
-            justify-content: space-between;
-            .footer_texts {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                color: white;
-                .footer-address {
-                    h3 {
-                        font-size: 28px;
-                        margin-bottom: 0.5rem;
-                        font-weight: 500;
-                        line-height: 1.2;
-                    }
-                    p {
-                        font-size: 16px;
-                        margin: 1rem 0;
-                    }
-                }
-                .footer-email {
-                    margin: 55px 0;
-                    a {
-                        color: white;
-                        font-size: 16px;
-                        text-decoration: none;
-                    }
-                }
-                .footer-navigate {
-                    h1 {
-                        margin-bottom: 1.5rem;
-                        font-size: 1.75rem;
-                    }
-                    .footer-links {
-                        grid-gap: 20px;
-                        display: flex;
-                        a {
-                            color: white;
-                            font-size: 16px;
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-            .footer_logo {
-                width: 300px;
-                height: 100%;
-            }
+  background: #000000;
+  height: 460px;
+  padding-top: 3rem;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    .footer_over {
+      display: flex;
+      justify-content: space-between;
+      .footer_texts {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        color: white;
+        .footer-address {
+          h3 {
+            font-size: 28px;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+          }
+          p {
+            font-size: 16px;
+            margin: 1rem 0;
+          }
         }
+        .footer-email {
+          margin: 55px 0;
+          a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+          }
+        }
+        .footer-navigate {
+          h1 {
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+          }
+          .footer-links {
+            grid-gap: 20px;
+            display: flex;
+            a {
+              color: white;
+              font-size: 16px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .footer_logo {
+        width: 300px;
+        height: 100%;
+      }
     }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    .footer_div {
-        .container {
-            width: 95%;
-            .footer_over {
-                .footer_logo {
-                    width: 270px;
-                    height: 100%;
-                }
-            }
+  .footer_div {
+    .container {
+      width: 95%;
+      .footer_over {
+        .footer_logo {
+          width: 270px;
+          height: 100%;
         }
+      }
     }
+  }
 }
 
 @media only screen and (max-width: 900px) {
-    .footer_div {
-        height: 100%;
-        .container {
-            width: 98%;
-            margin: 0 auto;
-            .footer_over {
-
-                .footer_texts {
-                    .footer-email {
-                        margin: 30px 0;
-                    }
-                    .footer-navigate {
-                        .footer-links {
-                            margin-bottom: 2rem;
-                        }
-                    }
-                }
-                .footer_logo {
-                    width: 170px;
-                    height: 150px;
-                    margin-bottom: 3rem;
-                    display: flex;
-                    justify-content: end;
-                    align-items: end;
-                }
+  .footer_div {
+    height: 100%;
+    .container {
+      width: 98%;
+      margin: 0 auto;
+      .footer_over {
+        .footer_texts {
+          .footer-email {
+            margin: 30px 0;
+          }
+          .footer-navigate {
+            .footer-links {
+              margin-bottom: 2rem;
             }
+          }
         }
+        .footer_logo {
+          width: 170px;
+          height: 150px;
+          margin-bottom: 3rem;
+          display: flex;
+          justify-content: end;
+          align-items: end;
+        }
+      }
     }
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .footer_div {
-        height: 100%;
-        .container {
-            width: 98%;
-            margin: 0 auto;
-            .footer_over {
-                display: flex;
-                flex-direction: column-reverse;
-                .footer_texts {
-                    .footer-email {
-                        margin: 30px 0;
-                    }
-                    .footer-navigate {
-                        .footer-links {
-                            margin-bottom: 2rem;
-                        }
-                    }
-                }
-                .footer_logo {
-                    width: 170px;
-                    height: 150px;
-                    margin-bottom: 3rem;
-                }
+  .footer_div {
+    height: 100%;
+    .container {
+      width: 98%;
+      margin: 0 auto;
+      .footer_over {
+        display: flex;
+        flex-direction: column-reverse;
+        .footer_texts {
+          .footer-email {
+            margin: 30px 0;
+          }
+          .footer-navigate {
+            .footer-links {
+              margin-bottom: 2rem;
             }
+          }
         }
+        .footer_logo {
+          width: 170px;
+          height: 150px;
+          margin-bottom: 3rem;
+        }
+      }
     }
+  }
 }

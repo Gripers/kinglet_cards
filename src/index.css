@@ -12,6 +12,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  color: white;
 }
 
 body {
@@ -31,6 +33,27 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.owl-stage-outer {
+  overflow: unset !important;
+  overflow-x: clip !important;
+}
+
+.owl-stage {
+  display: flex;
+}
+
+.owl-item {
+  transform: scale3d(0.8, 0.8, 1) !important;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.owl-item.active.center {
+  transform: scale3d(1, 1, 1) !important;
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 @media (max-width: 1550px) and (min-width: 1536px) {
@@ -73,12 +96,5 @@ img {
   .container {
     padding: 0 15px;
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .container {
-    padding: 0 15px;
-    width: 98%;
   }
 }
