@@ -75,3 +75,10 @@ img {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 15px;
+    width: 98%;
+  }
+}

@@ -50,15 +50,59 @@
                 }
             }
             .footer_logo {
-                width: 430px;
-                height: 330px;
+                width: 300px;
+                height: 100%;
             }
         }
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .footer_div {
+        .container {
+            width: 95%;
+            .footer_over {
+                .footer_logo {
+                    width: 270px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 900px) {
+    .footer_div {
+        height: 100%;
+        .container {
+            width: 98%;
+            margin: 0 auto;
+            .footer_over {
+
+                .footer_texts {
+                    .footer-email {
+                        margin: 30px 0;
+                    }
+                    .footer-navigate {
+                        .footer-links {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+                .footer_logo {
+                    width: 170px;
+                    height: 150px;
+                    margin-bottom: 3rem;
+                    display: flex;
+                    justify-content: end;
+                    align-items: end;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
     .footer_div {
         height: 100%;
         .container {
