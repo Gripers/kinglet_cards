@@ -1,7 +1,5 @@
 .about-over {
-    background: #000;
     color: white;
-    //height: 100vh;
     .container {
         width: 65%;
         margin: 0 auto;
@@ -17,7 +15,7 @@
                 text-transform: capitalize;
             }
             .about-texts {
-                padding-bottom: 3rem;
+                padding: 3rem 0;
                 h2 {
                     font-size: 2rem;
                     margin-bottom: 0.5rem;
@@ -42,10 +40,11 @@
             margin: 0 auto;
             .about-all {
                 h3 {
-                    font-size: 40px;
+                    font-size: 52px;
                     margin: 5% 0;
                 }
                 .about-texts {
+                    padding: 1rem 0;
                     h2 {
                         font-size: 32px;
                         margin: 10px 0;
