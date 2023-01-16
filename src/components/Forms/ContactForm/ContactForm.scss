@@ -36,6 +36,11 @@
                 overflow: visible;
                 outline: none;
             }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
 
             textarea {
                 background-color: transparent;
