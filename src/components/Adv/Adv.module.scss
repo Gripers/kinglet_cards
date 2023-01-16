@@ -1,0 +1,37 @@
+.adv__wrapper {
+  width: 90%;
+  max-width: 1100px;
+  border: 2px solid #8b6448;
+  border-radius: 50px;
+  text-align: center;
+  margin: 50px auto 0;
+  padding: 0 0 50px;
+
+  legend {
+    font-size: 22px;
+    padding: 0 20px;
+  }
+
+  .adv__etaps {
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 36px;
+
+    .adv__etaps_etap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      h3 {
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .adv__wrapper .adv__etaps .adv__etaps_etap {
+    flex-direction: column;
+  }
+}

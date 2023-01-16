@@ -15,10 +15,7 @@ const Testimonials = () => {
       >
         {testimonials_array.map((item) => (
           <div style={{ height: '100%' }}>
-            <div
-              className={styles.testimonials__carousel_item}
-              style={{ height: '100%' }}
-            >
+            <div className={styles.testimonials__carousel_item}>
               <p>{item.content}</p>
             </div>
             <button>{item.author}</button>
