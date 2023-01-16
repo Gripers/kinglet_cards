@@ -57,6 +57,25 @@ button {
   transition: all 0.3s;
 }
 
+.p-accordion
+  .p-accordion-header:not(.p-disabled)
+  .p-accordion-header-link:focus {
+  box-shadow: unset !important;
+}
+
+.p-accordion-header-link {
+  border: none !important;
+  background-color: transparent !important;
+  font-size: 14px !important;
+}
+
+.p-accordion-content {
+  border: none !important;
+  background-color: transparent !important;
+  color: white !important;
+  font-size: 14px !important;
+}
+
 @media (max-width: 1550px) and (min-width: 1536px) {
   .container {
     padding: 0 30px;
