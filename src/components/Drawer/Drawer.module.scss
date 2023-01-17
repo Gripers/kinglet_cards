@@ -1,0 +1,10 @@
+.drawer {
+  height: fit-content !important;
+  background-color: #0c0c0c !important;
+  padding: 3vh;
+
+  nav {
+    display: grid;
+    grid-gap: 20px;
+  }
+}
