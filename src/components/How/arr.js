@@ -1,7 +1,7 @@
-import paint from '../../assets/images/brush.svg';
-import order from '../../assets/images/local_shipping.svg';
-import draw from '../../assets/images/draw.svg';
-import stars from '../../assets/images/preferences.svg';
+import paint from '../../assets/icons/brush.svg';
+import order from '../../assets/icons/local_shipping.svg';
+import draw from '../../assets/icons/draw.svg';
+import stars from '../../assets/icons/preferences.svg';
 
 const how_array = [
   {

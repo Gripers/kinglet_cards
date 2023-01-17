@@ -5,6 +5,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import Drawer from './components/Drawer/Drawer';
 import Contact from './pages/Contact/Contact';
 import Designs from "./pages/Designs/Designs";
+import TermsCondition from "./pages/Terms&Conditions/TermsCondition";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/popular-designs' element={<Designs />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/contact-us' element={<Contact />} />
+        <Route path='/terms-conditions' element={<TermsCondition />} />
       </Routes>
 
       <Drawer />

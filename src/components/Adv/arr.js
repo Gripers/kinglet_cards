@@ -1,6 +1,6 @@
-import doorstep from '../../assets/images/doorstep.png';
-import inter from '../../assets/images/glob.png';
-import headphone from '../../assets/images/headphone.png';
+import doorstep from '../../assets/icons/doorstep.png';
+import inter from '../../assets/icons/glob.png';
+import headphone from '../../assets/icons/headphone.png';
 
 const adv_array = [
   {
