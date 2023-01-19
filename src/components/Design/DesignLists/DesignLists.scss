@@ -14,6 +14,11 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
+                cursor: pointer;
+                h3 {
+                    margin: 15px 0;
+                }
             }
             .swiper-button-next,
             .swiper-button-prev {
@@ -58,6 +63,7 @@
                 border-radius: 23px;
                 background-position: center;
                 background-size: cover;
+                background-repeat: no-repeat;
                 position: relative;
                 .chip {
                     width: 44px;
@@ -78,6 +84,7 @@
             height: 310px;
 
             .swiper {
+
                 .swiper-button-next {
                     right: 88%;
                 }
@@ -103,11 +110,24 @@
             height: 310px;
 
             .swiper {
+                .swiper-slide {
+                    width: 180px;
+                    height: 190px;
+                }
                 .swiper-button-next {
                     right: 82%;
                 }
                 .swiper-button-prev {
                     left: 0%;
+                }
+            }
+        }
+        .carts_div {
+            .carts_inner {
+                grid-template-columns: 1fr 1fr;
+                .cart {
+                    width: 100%;
+                    height: 200px;
                 }
             }
         }
@@ -120,6 +140,10 @@
             height: 310px;
 
             .swiper {
+                .swiper-slide {
+                    width: 180px;
+                    height: 190px;
+                }
                 .swiper-button-next {
                     right: 82%;
                 }
@@ -145,6 +169,16 @@
                 }
             }
         }
+        .carts_div {
+            .carts_inner {
+                grid-template-columns: 1fr;
+                .cart {
+                    width: auto;
+                    height: 200px;
+                    background-size: contain;
+                }
+            }
+        }
     }
 }
 
@@ -159,6 +193,16 @@
                 }
                 .swiper-button-prev {
                     left: 65%;
+                }
+            }
+        }
+        .carts_div {
+            .carts_inner {
+                grid-template-columns: 1fr;
+                .cart {
+                    width: auto;
+                    height: 200px;
+                    background-size: cover;
                 }
             }
         }

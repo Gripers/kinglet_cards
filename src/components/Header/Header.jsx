@@ -8,6 +8,7 @@ import fst from '../../assets/images/1card-cover.png';
 import sec from '../../assets/images/2-cover.png';
 import third from '../../assets/images/3-cover.png';
 import fourth from '../../assets/images/4-cover.png';
+import {Link} from "react-router-dom";
 
 const Header = () => {
   return (
@@ -40,8 +41,12 @@ const Header = () => {
             style={{ backgroundImage: `url('${item.pic}')` }}
           >
             <div className={styles.header__carousel_item_btns}>
-              <button>Create your own</button>
-              <button>Browse Pre-Made Designs</button>
+              <Link to='/create-your-own'>
+                  <button>Create your own</button>
+              </Link>
+              <Link to='/popular-designs'>
+                  <button>Browse Pre-Made Designs</button>
+              </Link>
             </div>
           </div>
         ))}

@@ -5,6 +5,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import Contact from './pages/Contact/Contact';
 import Designs from "./pages/Designs/Designs";
 import TermsCondition from "./pages/Terms&Conditions/TermsCondition";
+import CreateOwn from "./pages/CreateOwn/CreateOwn";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
               <Route path='/popular-designs' element={<Designs/>} loading={true}/>
               <Route path='/about-us' element={<AboutUs/>} loading={true}/>
               <Route path='/contact-us' element={<Contact/>} loading={true}/>
+              <Route path='/create-your-own/:title' element={<CreateOwn/>} loading={true}/>
               <Route path='/terms-conditions' element={<TermsCondition/>} loading={true}/>
           </Routes>
           <Drawer/>
