@@ -1,0 +1,64 @@
+.own__design_wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .own__design_cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .own__design_cards_card {
+      width: 100%;
+      min-height: 100%;
+      border-radius: 25px;
+      background-image: url('../../assets/images/3-cover.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: grid;
+      grid-gap: 20px;
+      overflow: hidden;
+      padding: 50px;
+
+      h2,
+      h3 {
+        font-family: 'Copperplate', sans-serif;
+        font-size: 1.7vw;
+      }
+
+      img {
+        width: 15%;
+      }
+
+      .own__design_cards_card_flexer {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .white_bg {
+          width: 100%;
+          height: 50px;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .own__design_wrapper .own__design_cards {
+    flex-direction: column;
+
+    .own__design_cards_card h2,
+    .own__design_cards_card h3 {
+      font-size: 16px !important;
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .own__design_wrapper .own__design_cards .own__design_cards_card {
+    padding: 30px;
+  }
+}

@@ -1,0 +1,38 @@
+.how__wrapper {
+  width: 90%;
+  text-align: center;
+  margin: 50px auto 0;
+
+  .how__etaps {
+    display: grid;
+    grid-gap: 50px;
+    margin-top: 26px;
+
+    .how__pic {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #ffe1b1;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin: 16px 0;
+    }
+
+    .how__line {
+      width: 72px;
+      height: 2px;
+      margin: auto;
+      border: 1px dashed white;
+      transform: rotate(90deg);
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

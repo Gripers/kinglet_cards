@@ -1,0 +1,111 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  .line {
+    height: 1px;
+    width: 100%;
+    background: #222222;
+  }
+
+  .contact-form-title {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    margin: 60px 0;
+  }
+
+  .contact__form {
+    #contact-form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      input {
+        margin-top: 40px;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        border-bottom: 1px solid #222222;
+        padding-bottom: 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        transition: 0.4s;
+        overflow: visible;
+        outline: none;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      textarea {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid #222;
+        padding-bottom: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+        color: #fff;
+        resize: none;
+        margin-top: 40px;
+        transition: 0.4s;
+        min-height: 80px;
+        outline: none;
+      }
+
+      .form_send-btn {
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        border-radius: 60px;
+        font-size: 24px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 250px;
+        margin-top: 50px;
+        background: none;
+        color: #ffffff;
+      }
+
+      .form_send-btn:hover {
+        background: #ffffff;
+        color: black;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    .contact__form {
+      #contact-form {
+        input,
+        textarea {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        textarea {
+          padding-bottom: 15px;
+          min-height: 50px;
+        }
+        .form_send-btn {
+          width: 170px;
+          font-size: 20px;
+          line-height: 24px;
+          margin: 50px auto 0 auto;
+        }
+      }
+    }
+  }
+}

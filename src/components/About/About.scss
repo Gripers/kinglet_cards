@@ -1,0 +1,57 @@
+.about-over {
+  color: white;
+  .container {
+    width: 65%;
+    margin: 0 auto;
+    .about-all {
+      padding-top: 0.5rem;
+      h3 {
+        display: flex;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 4.5rem;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        text-transform: capitalize;
+      }
+      .about-texts {
+        padding: 3rem 0;
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+        p {
+          margin-top: 0;
+          margin-bottom: 1rem;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about-over {
+    .container {
+      width: 98%;
+      margin: 0 auto;
+      .about-all {
+        h3 {
+          font-size: 40px;
+          margin: 5% 0;
+          text-align: center;
+        }
+        .about-texts {
+          padding: 1rem 0;
+          h2 {
+            font-size: 32px;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
