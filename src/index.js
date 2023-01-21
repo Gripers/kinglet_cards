@@ -12,6 +12,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import { topbar } from 'react-router-loading';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 topbar.config({
   barColors: {
@@ -23,9 +25,11 @@ topbar.config({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <ContextProvider>
-      <App />
-    </ContextProvider>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <ContextProvider>
+        <App />
+      </ContextProvider>
+    </BrowserRouter>
+  </Provider>
 );
