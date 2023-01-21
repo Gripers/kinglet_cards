@@ -6,12 +6,12 @@ import DesignLists from "../../components/Design/DesignLists/DesignLists";
 const Designs = () => {
     return (
         <>
-            <Navbar />
-            <DesignHeader />
-            <DesignLists />
-            <Footer />
+            <Navbar/>
+            <DesignHeader/>
+            <DesignLists/>
+            <Footer/>
         </>
     );
-};
+}
 
 export default Designs;

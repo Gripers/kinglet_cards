@@ -8,6 +8,11 @@
   src: url('./assets/font/AeonikTRIAL-Bold.otf');
 }
 
+@font-face {
+  font-family: 'Copperplate';
+  src: url('./assets/font/Copperplate Gothic Bold Regular.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +40,12 @@ button {
   cursor: pointer;
   font-family: 'Aeonik Regular';
 }
+
+input {
+  font-family: 'Aeonik Regular', sans-serif;
+  font-size: 16px;
+}
+
 
 .owl-stage-outer {
   overflow: unset !important;

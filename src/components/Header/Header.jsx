@@ -1,5 +1,6 @@
 import styles from './Header.module.scss';
 
+import { Link } from 'react-router-dom';
 import ReactOwlCarousel from 'react-owl-carousel';
 
 import header_carousel_config from './header_carousel_config';
@@ -8,7 +9,6 @@ import fst from '../../assets/images/1card-cover.png';
 import sec from '../../assets/images/2-cover.png';
 import third from '../../assets/images/3-cover.png';
 import fourth from '../../assets/images/4-cover.png';
-import {Link} from "react-router-dom";
 
 const Header = () => {
   return (
@@ -35,22 +35,19 @@ const Header = () => {
             pic: fourth,
           },
         ].map((item) => (
-          <div
-            key={item.id}
-            className={styles.header__carousel_item}
-            style={{ backgroundImage: `url('${item.pic}')` }}
-          >
-            <div className={styles.header__carousel_item_btns}>
-              <Link to='/create-your-own'>
-                  <button>Create your own</button>
-              </Link>
-              <Link to='/popular-designs'>
-                  <button>Browse Pre-Made Designs</button>
-              </Link>
-            </div>
+          <div key={item.id} className={styles.header__carousel_item}>
+            <img src={item.pic} alt='' />
           </div>
         ))}
       </ReactOwlCarousel>
+      <div className={styles.header__carousel_item_btns}>
+        <Link to='/create-your-own'>
+          <button>Create your own</button>
+        </Link>
+        <Link to='/popular-designs'>
+          <button>Browse Pre-Made Designs</button>
+        </Link>
+      </div>
     </header>
   );
 };

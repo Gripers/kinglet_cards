@@ -12,11 +12,13 @@
     "primereact": "^8.7.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
     "react-modern-drawer": "^1.1.2",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.6.2",
     "react-router-loading": "^1.0.0",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.1",
     "sass": "^1.57.1",
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4"

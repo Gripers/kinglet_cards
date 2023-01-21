@@ -1,0 +1,21 @@
+.configurator {
+  margin: 26px auto;
+
+  .configurator__selectors {
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      border: none;
+      background-color: transparent;
+      font-size: 22px !important;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .configurator .configurator__selectors button {
+    font-size: 16px !important;
+  }
+}

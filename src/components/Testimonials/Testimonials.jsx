@@ -1,11 +1,14 @@
 import styles from './Testimonials.module.scss';
-
 import ReactOwlCarousel from 'react-owl-carousel';
-
 import testimonials_array from './arr';
 import carousel_config from './carousel_config';
+import {useContext} from "react";
+import {Context} from "../../context";
 
 const Testimonials = () => {
+
+    const { testimonials } = useContext(Context)
+
   return (
     <div className={styles.testimonials__wrapper}>
       <h1>Testimonials</h1>
@@ -13,12 +16,12 @@ const Testimonials = () => {
         {...carousel_config}
         className={styles.testimonials__carousel}
       >
-        {testimonials_array.map((item) => (
-          <div style={{ height: '100%' }}>
+        {testimonials.map((el) => (
+          <div style={{ height: '100%' }} key={el.id}>
             <div className={styles.testimonials__carousel_item}>
-              <p>{item.content}</p>
+              <p>{el.comment}</p>
             </div>
-            <button>{item.author}</button>
+            <button>{el.author}</button>
           </div>
         ))}
       </ReactOwlCarousel>
