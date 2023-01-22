@@ -13,7 +13,7 @@ import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import {topbar} from 'react-router-loading';
-import { ToastContainer } from 'react-toastify';
+import {ToastContainer} from 'react-toastify';
 
 topbar.config({
     barColors: {
