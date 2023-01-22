@@ -2,12 +2,11 @@ import styles from './Testimonials.module.scss';
 import ReactOwlCarousel from 'react-owl-carousel';
 import testimonials_array from './arr';
 import carousel_config from './carousel_config';
-import {useContext} from "react";
-import {Context} from "../../context";
+import { useContext } from 'react';
+import { Context } from '../../context';
 
 const Testimonials = () => {
-
-    const { testimonials } = useContext(Context)
+  const { testimonials } = useContext(Context);
 
   return (
     <div className={styles.testimonials__wrapper}>

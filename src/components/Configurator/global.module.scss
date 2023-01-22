@@ -61,6 +61,17 @@
       }
     }
   }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+    img {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
 }
 
 @media all and (max-width: 500px) {
