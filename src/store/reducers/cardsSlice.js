@@ -18,7 +18,6 @@ const cardsSlice = createSlice({
     builder
       .addCase(cardsSliceApi.pending, (state, action) => {
         state.isLoading = true;
-        console.log('loading');
       })
       .addCase(cardsSliceApi.fulfilled, (state, action) => {
         state.isLoading = false;
