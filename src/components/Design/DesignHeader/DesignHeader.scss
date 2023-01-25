@@ -1,40 +1,40 @@
 .container {
-    width: 85%;
-    margin: 0 auto 90px auto;
-    .design-header-title {
-        font-weight: 700;
-        font-size: 4.5rem;
-        line-height: 100%;
-        letter-spacing: -.01em;
-        text-transform: capitalize;
-        margin: 8%0 5%;
-        font-style: normal;
-        text-align: center;
-        color: #fff;
-    }
-    .design-header-text {
-        margin-top: 20px;
-        font-style: normal;
-        text-align: center;
-        font-weight: 400;
-        font-size: 21px;
-        line-height: 150%;
-        letter-spacing: -.01em;
-        color: #fff;
-    }
+  width: 85%;
+  margin: 0 auto 90px auto;
+  .design-header-title {
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+    margin: 8%0 5%;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+  }
+  .design-header-text {
+    margin-top: 20px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
 }
 
 @media only screen and (max-width: 650px) {
-    .container {
-        width: 98%;
-        .design-header-title {
-            font-size: 2.5rem;
-            margin: 50px 0;
-        }
-        .design-header-text {
-            margin-top: 20px;
-            font-size: 18px;
-            text-align: left;
-        }
+  .container {
+    width: 98%;
+    .design-header-title {
+      font-size: 2.5rem;
+      margin: 50px 0;
     }
+    .design-header-text {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: left;
+    }
+  }
 }

@@ -9,7 +9,7 @@ const How = () => {
       <div className={styles.how__etaps}>
         {how_array.map((item) => (
           <>
-            <div>
+            <div key={item.id}>
               <div className={styles.how__pic}>
                 <img src={item.pic} alt='' />
               </div>

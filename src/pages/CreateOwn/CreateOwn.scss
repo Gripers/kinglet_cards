@@ -1,21 +1,21 @@
 .current-cart {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    .cart {
-        width: 400px;
-        height: 250px;
-        border-radius: 23px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        .chip {
-            width: 44px;
-            height: 33px;
-            position: absolute;
-            top: 35%;
-            left: 10%;
-        }
+  .cart {
+    width: 400px;
+    height: 250px;
+    border-radius: 23px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    .chip {
+      width: 44px;
+      height: 33px;
+      position: absolute;
+      top: 35%;
+      left: 10%;
     }
+  }
 }
