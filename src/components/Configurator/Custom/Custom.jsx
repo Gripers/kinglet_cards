@@ -13,7 +13,7 @@ const Custom = () => {
 
   return (
     <div className={styles.base__wrapper}>
-      <form>
+      <form className={styles.custom__form}>
         <h3>Text</h3>
         <input
           type='text'

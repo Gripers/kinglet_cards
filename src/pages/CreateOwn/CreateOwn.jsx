@@ -1,47 +1,41 @@
-import {useParams} from "react-router-dom";
-import React, {useContext, useEffect, useState} from "react";
+import {useContext, useEffect} from "react";
 import {Context} from "../../context";
 import "./CreateOwn.scss"
 import Navbar from "../../components/Navbar/Navbar";
-import Configurator from '../../components/Configurator/Configurator';
+import './CreateOwn.scss';
 
-import chip from '../../assets/icons/chip.png';
+import {useParams} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+import {variantsApi} from '../../store/reducers/variantsSlice';
+import Configurator from '../../components/Configurator/Configurator';
+import Cards from '../../components/Cards/Cards';
 
 const CreateOwn = () => {
-    const {cards} = useContext(Context);
+
 
     const params = useParams();
+
+    const dispatch = useDispatch();
+    const {cards} = useContext(Context);
 
     const currentCart = cards.find((el) => {
         return (el.title == params.title)
     });
-    const [detail, setDetail] = useState()
-
-    // async function ll() {
-    //     let g = await axios
-    //         .get(`${API}/Products/${params.title}`)
-    //     setDetail(g.data)
-    // }
 
     useEffect(() => {
-        // ll()
+        dispatch(variantsApi({id: currentCart?.id}));
     }, []);
-
 
     return (
         <>
             <Navbar/>
-            <div className='current-cart'>
-                <div
-                    className='cart'
-                    style={{backgroundImage: `url(${currentCart?.image})`}}
-                >
-                    <img className='chip' src={chip} alt=''/>
-                </div>
+            <div className='createown__wrapper'>
+                <Cards obj={currentCart}/>
+                <Configurator/>
             </div>
-            <Configurator type={currentCart?.type}/>
         </>
     );
+
 };
 
 export default CreateOwn;
