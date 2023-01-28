@@ -3,3 +3,17 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+
+.own__design_wrapper .btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.own__design_wrapper .btn button {
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(276deg, #523a2b, #3e2f26, #523a2b);
+  font-size: 16px !important;
+  padding: 16px;
+}
