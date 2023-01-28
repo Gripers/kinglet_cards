@@ -49,7 +49,7 @@ const Cards = ({ obj }) => {
         style={{
           backgroundImage: obj
             ? `url('${border ? border : null}'), url('${
-                variant !== '' ? variant[0]?.front_img : obj.back_image
+                variant !== '' ? variant[0]?.front_img : obj.back_img
               }')`
             : `url('${border}'), url('${bg}')`,
         }}
@@ -68,7 +68,7 @@ const Cards = ({ obj }) => {
         className={styles.own__design_cards_card}
         style={{
           backgroundImage: obj
-            ? `url('${variant !== '' ? variant[0]?.back_img : obj.front_image}')`
+            ? `url('${variant !== '' ? variant[0]?.back_img : obj.front_img}')`
             : `url('${bg}')`,
         }}
       >
