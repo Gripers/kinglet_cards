@@ -43,7 +43,7 @@ const DesignLists = () => {
             <Link to={`/create-your-own/${el.title}`} key={el.id}>
               <div
                 className='cart'
-                style={{ backgroundImage: `url(${el.image})` }}
+                style={{ backgroundImage: `url(${el.back_image})` }}
               >
                 <img className='chip' src={chip} alt='' />
               </div>

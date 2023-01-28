@@ -4,7 +4,7 @@ import styles from './Cards.module.scss';
 import { useSelector } from 'react-redux';
 import Draggable from 'react-draggable';
 import { Context } from '../../context';
-import bg from '../../assets/images/metal/3702536.webp';
+import bg from '../../assets/images/metal/black.png';
 import chip from '../../assets/icons/chip.png';
 
 const Cards = ({ obj }) => {
@@ -47,11 +47,9 @@ const Cards = ({ obj }) => {
       <div
         className={styles.own__design_cards_card}
         style={{
-          backgroundImage: obj
-            ? `url('${border ? border : null}'), url('${
-                variant !== '' ? variant[0]?.front_img : obj.image
-              }')`
-            : `url('${border}'), url('${bg}')`,
+          backgroundImage: `url('${border ? border : null}'), url('${
+            variant !== '' ? variant[0]?.front_img : obj?.back_image || bg
+          }')`,
         }}
       >
         <Draggable onDrag={() => setIsTextBorder(true)}>
@@ -67,9 +65,9 @@ const Cards = ({ obj }) => {
       <div
         className={styles.own__design_cards_card}
         style={{
-          backgroundImage: obj
-            ? `url('${variant !== '' ? variant[0]?.back_img : obj.image}')`
-            : `url('${bg}')`,
+          backgroundImage: `url('${
+            variant !== '' ? variant[0]?.back_img : obj?.back_image || bg
+          }')`,
         }}
       >
         <div className={styles.own__design_cards_card_flexer}>
