@@ -18,8 +18,13 @@ const configuratorSlice = createSlice({
     border: '',
   },
   reducers: {
-    setBigChip: (state) => {
-      state.isBigChip = !state.isBigChip;
+    setBigChip: (state, action) => {
+      action.payload
+        ? (state.isBigChip = false)
+        : (state.isBigChip = !state.isBigChip);
+    },
+    removeBorder: (state) => {
+      state.border = '';
     },
   },
   extraReducers: (builder) => {
@@ -31,6 +36,6 @@ const configuratorSlice = createSlice({
   },
 });
 
-export const { setBigChip } = configuratorSlice.actions;
+export const { setBigChip, removeBorder } = configuratorSlice.actions;
 
 export default configuratorSlice.reducer;
