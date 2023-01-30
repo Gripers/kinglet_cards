@@ -1,1 +1,1 @@
-export const API = 'https://kingletcards.com/api/';
+export const API = 'https://api.kingletcards.com/api/';

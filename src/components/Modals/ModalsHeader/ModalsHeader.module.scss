@@ -1,0 +1,28 @@
+.header {
+  * {
+    color: black;
+  }
+
+  .header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .close {
+      display: flex;
+    }
+  }
+
+  .header__bottom {
+    margin: 26px 0;
+
+    ol {
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        color: rgba(23, 23, 23, 0.15);
+      }
+    }
+  }
+}

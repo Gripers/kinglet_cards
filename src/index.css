@@ -91,6 +91,14 @@ input {
   padding: 0 !important;
 }
 
+svg {
+  cursor: pointer;
+}
+
+input[type='button'] {
+  cursor: pointer;
+}
+
 @media (max-width: 1550px) and (min-width: 1536px) {
   .container {
     padding: 0 30px;

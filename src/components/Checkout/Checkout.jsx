@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { useDispatch } from 'react-redux';
 
 import styles from './Checkout.module.scss';
@@ -22,7 +20,7 @@ const Checkout = () => {
         </button>
       </div>
       <div className={styles.current_step}>
-        <button>1. Add Shipping Information</button>
+        <button style={{ color: 'black' }}>1. Add Shipping Information</button>
         <button>2. Confirm Order</button>
         <button>3. Payment Order</button>
       </div>
