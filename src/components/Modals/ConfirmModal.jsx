@@ -1,17 +1,17 @@
+import { useState } from 'react';
 import styles from './modals.module.scss';
 
 import { Modal, ModalDialog } from '@mui/joy';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { confirmModalState } from '../../store/reducers/globalSlice';
-import ModalsHeader from './ModalsHeader/ModalsHeader';
 import { switchToCheckout } from '../../nn';
+import ModalsHeader from './ModalsHeader/ModalsHeader';
 
 const ConfirmModal = ({ formData }) => {
   const dispatch = useDispatch();
   const { isConfirmModalOpen } = useSelector((state) => state.global);
-
-  console.log(formData);
+  const [checkout, setCheckout] = useState(false);
 
   return (
     <Modal open={isConfirmModalOpen}>
@@ -33,7 +33,11 @@ const ConfirmModal = ({ formData }) => {
             </div>
             <div className={styles.left__float}>
               <button onClick={() => switchToCheckout(dispatch)}>Back</button>
-              <input type='button' value='Proceed to payment' />
+              <input
+                type='button'
+                value='Proceed to payment'
+                onClick={() => setCheckout(true)}
+              />
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ const globalSlice = createSlice({
   initialState: {
     isCheckoutModalOpen: false,
     isConfirmModalOpen: false,
+    totalPrice: 160,
   },
   reducers: {
     checkoutModalState: (state, action) => {
@@ -13,9 +14,13 @@ const globalSlice = createSlice({
     confirmModalState: (state, action) => {
       state.isConfirmModalOpen = action.payload;
     },
+    totalIncrement: (state, action) => {
+      state.totalPrice += action.payload;
+    },
   },
 });
 
-export const { checkoutModalState, confirmModalState } = globalSlice.actions;
+export const { checkoutModalState, confirmModalState, totalIncrement } =
+  globalSlice.actions;
 
 export default globalSlice.reducer;

@@ -2,8 +2,9 @@ import { useContext, useState } from 'react';
 import styles from './Cards.module.scss';
 
 import { useSelector } from 'react-redux';
-import Draggable from 'react-draggable';
 import { Context } from '../../context';
+import Draggable from 'react-draggable';
+
 import bg from '../../assets/images/metal/black.png';
 import chip from '../../assets/icons/chip.png';
 
@@ -16,53 +17,46 @@ const Cards = ({ obj }) => {
   const [isBorder, setIsBorder] = useState(false);
   const [isTextBorder, setIsTextBorder] = useState(false);
 
-  const fst_styles = {
-    width: 'fit-content',
-    visibility: namePosition === 0 ? 'visible' : 'hidden',
-    cursor: 'move',
-    border: isBorder ? '2px dashed white' : 'none',
+  const cusStyles = (position, n) => {
+    return {
+      visibility: position === n ? 'visible' : 'hidden',
+    };
   };
 
-  const sec_styles = {
-    visibility: namePosition === 1 ? 'visible' : 'hidden',
-  };
-
-  const third_styles = {
-    visibility: minDataPosition === 0 ? 'visible' : 'hidden',
-  };
-
-  const fourth_styles = {
-    visibility: minDataPosition === 1 ? 'visible' : 'hidden',
-  };
-
-  const textStyles = {
-    width: 'fit-content',
-    visibility: text ? 'visible' : 'hidden',
-    cursor: 'move',
-    border: isTextBorder ? '2px dashed white' : 'none',
+  const cusSecStyles = (param1, param2) => {
+    return {
+      width: 'fit-content',
+      visibility: param1 ? 'visible' : 'hidden',
+      cursor: 'move',
+      border: param2 ? '2px dashed white' : 'none',
+    };
   };
 
   return (
     <div className={styles.own__design_cards}>
       <div
+        id='card'
         className={styles.own__design_cards_card}
         style={{
           backgroundImage: `url('${border ? border : null}'), url('${
-            variant !== '' ? variant[0]?.front_img : obj?.back_image || bg
+            variant !== '' ? variant[0]?.front_img : obj?.front_image || bg
           }')`,
         }}
       >
         <Draggable onDrag={() => setIsTextBorder(true)}>
-          <h3 style={textStyles}>{text ? text : 'a'}</h3>
+          <h3 style={cusSecStyles(text, isTextBorder)}>{text ? text : 'a'}</h3>
         </Draggable>
         <img style={{ width: isBigChip ? '15%' : '10%' }} src={chip} alt='' />
-        <h2 style={third_styles}>0000 0000 0000 0000</h2>
-        <h2 style={third_styles}>00/00</h2>
+        <h2 style={cusStyles(minDataPosition, 0)}>0000 0000 0000 0000</h2>
+        <h2 style={cusStyles(minDataPosition, 0)}>00/00</h2>
         <Draggable onDrag={() => setIsBorder(true)}>
-          <h2 style={fst_styles}>{name ? name : 'kinglet'}</h2>
+          <h2 style={cusSecStyles(namePosition === 0, isBorder)}>
+            {name ? name : 'kinglet'}
+          </h2>
         </Draggable>
       </div>
       <div
+        id='card'
         className={styles.own__design_cards_card}
         style={{
           backgroundImage: `url('${
@@ -74,9 +68,9 @@ const Cards = ({ obj }) => {
           <div className={styles.white_bg}></div>
           <h2>000</h2>
         </div>
-        <h2 style={fourth_styles}>0000 0000 0000 0000</h2>
-        <h2 style={fourth_styles}>00/00</h2>
-        <h2 style={sec_styles}>{name ? name : 'kinglet'}</h2>
+        <h2 style={cusStyles(minDataPosition, 1)}>0000 0000 0000 0000</h2>
+        <h2 style={cusStyles(minDataPosition, 1)}>00/00</h2>
+        <h2 style={cusStyles(namePosition, 1)}>{name ? name : 'kinglet'}</h2>
       </div>
     </div>
   );

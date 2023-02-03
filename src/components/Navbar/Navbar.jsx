@@ -55,9 +55,9 @@ const Navbar = () => {
                   </NavLink>
                 ))}
               </nav>
-              <Link to='/create-your-own'>
+              <a href='/create-your-own'>
                 <button>Create Your Own</button>
-              </Link>
+              </a>
             </>
           )}
         </div>

@@ -1,12 +1,12 @@
 import { useContext, useEffect } from 'react';
-import { Context } from '../../context';
-import './CreateOwn.scss';
-import Navbar from '../../components/Navbar/Navbar';
 import './CreateOwn.scss';
 
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+
+import { Context } from '../../context';
 import { variantsApi } from '../../store/reducers/variantsSlice';
+import Navbar from '../../components/Navbar/Navbar';
 import Configurator from '../../components/Configurator/Configurator';
 import Cards from '../../components/Cards/Cards';
 

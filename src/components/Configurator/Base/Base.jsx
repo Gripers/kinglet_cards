@@ -8,6 +8,7 @@ import {
   configuratorApi,
   setBigChip,
 } from '../../../store/reducers/configuratorSlice';
+import { totalIncrement } from '../../../store/reducers/globalSlice';
 
 const Base = () => {
   const dispatch = useDispatch();
@@ -18,9 +19,7 @@ const Base = () => {
     minDataPosition,
     setMinDataPosition,
   } = useContext(Context);
-  const { isBigChip, borders, border } = useSelector(
-    (state) => state.configurator
-  );
+  const { borders, border } = useSelector((state) => state.configurator);
 
   useEffect(() => {
     dispatch(configuratorApi({}));
@@ -89,7 +88,10 @@ const Base = () => {
                       ? 'linear-gradient(276deg,#523a2b,#3e2f26,#523a2b)'
                       : 'unset',
                 }}
-                onClick={() => dispatch(configuratorApi({ id: item.id }))}
+                onClick={() => {
+                  dispatch(configuratorApi({ id: item.id }));
+                  dispatch(totalIncrement(Number(item.price)));
+                }}
               >
                 <img
                   style={{

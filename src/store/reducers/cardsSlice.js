@@ -16,7 +16,7 @@ const cardsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(cardsSliceApi.pending, (state, action) => {
+      .addCase(cardsSliceApi.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(cardsSliceApi.fulfilled, (state, action) => {
