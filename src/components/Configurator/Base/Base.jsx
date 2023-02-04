@@ -90,7 +90,7 @@ const Base = () => {
                 }}
                 onClick={() => {
                   dispatch(configuratorApi({ id: item.id }));
-                  dispatch(totalIncrement(Number(item.price)));
+                  dispatch(totalIncrement({ border: Number(item.price) }));
                 }}
               >
                 <img

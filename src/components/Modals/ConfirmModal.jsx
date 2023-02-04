@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './modals.module.scss';
 
 import { Modal, ModalDialog } from '@mui/joy';
@@ -11,7 +10,6 @@ import ModalsHeader from './ModalsHeader/ModalsHeader';
 const ConfirmModal = ({ formData }) => {
   const dispatch = useDispatch();
   const { isConfirmModalOpen } = useSelector((state) => state.global);
-  const [checkout, setCheckout] = useState(false);
 
   return (
     <Modal open={isConfirmModalOpen}>
@@ -33,11 +31,7 @@ const ConfirmModal = ({ formData }) => {
             </div>
             <div className={styles.left__float}>
               <button onClick={() => switchToCheckout(dispatch)}>Back</button>
-              <input
-                type='button'
-                value='Proceed to payment'
-                onClick={() => setCheckout(true)}
-              />
+              <input type='button' value='Proceed to payment' />
             </div>
           </div>
         </div>

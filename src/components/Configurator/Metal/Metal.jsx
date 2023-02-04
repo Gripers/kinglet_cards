@@ -8,7 +8,7 @@ import { cardsSliceApi } from '../../../store/reducers/cardsSlice';
 import { changeVariant } from '../../../store/reducers/variantsSlice';
 import defaultColors from '../../../dbs/defaultColors';
 
-const Metal = ({ type }) => {
+const Metal = () => {
   const dispatch = useDispatch();
   const { cards } = useSelector((state) => state.cards);
   const { variants } = useSelector((state) => state.variants);
@@ -24,7 +24,7 @@ const Metal = ({ type }) => {
         {cards.map((card) => (
           <div
             key={card.id}
-            style={{ border: card?.type === type ? '1px solid white' : null }}
+            style={{ border: card?.type === '' ? '5px solid white' : null }}
             onClick={() =>
               dispatch(
                 changeVariant({

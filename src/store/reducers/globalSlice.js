@@ -15,7 +15,13 @@ const globalSlice = createSlice({
       state.isConfirmModalOpen = action.payload;
     },
     totalIncrement: (state, action) => {
-      state.totalPrice += action.payload;
+      if (action.payload.border) {
+        state.totalPrice = 165;
+      } else if (action.payload.color) {
+        state.totalPrice = 175;
+      } else {
+        state.totalPrice = 160;
+      }
     },
   },
 });

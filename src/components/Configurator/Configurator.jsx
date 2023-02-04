@@ -6,7 +6,7 @@ import Base from './Base/Base';
 import Metal from './Metal/Metal';
 import Custom from './Custom/Custom';
 
-const Configurator = ({ type }) => {
+const Configurator = () => {
   const { component, setComponent } = useContext(Context);
   const [active, setActive] = useState(0);
 
@@ -28,7 +28,7 @@ const Configurator = ({ type }) => {
     },
     onClick: () => {
       setActive(1);
-      setComponent(<Metal type={type} />);
+      setComponent(<Metal />);
     },
   };
 
