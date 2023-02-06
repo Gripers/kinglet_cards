@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import Base from './components/Configurator/Base/Base';
 import { toast } from 'react-toastify';
-import { API } from './api/Api';
+import { API } from './api/api';
 import { useLocation } from 'react-router-dom';
 
 const Context = createContext();

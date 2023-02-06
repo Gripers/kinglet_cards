@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import { cardsSliceApi } from '../../../store/reducers/cardsSlice';
 import { changeVariant } from '../../../store/reducers/variantsSlice';
 import defaultColors from '../../../dbs/defaultColors';
+import { totalIncrement } from '../../../store/reducers/globalSlice';
 
 const Metal = () => {
   const dispatch = useDispatch();
@@ -25,15 +26,17 @@ const Metal = () => {
           <div
             key={card.id}
             style={{ border: card?.type === '' ? '5px solid white' : null }}
-            onClick={() =>
+            onClick={() => {
+              console.log(card.price);
               dispatch(
                 changeVariant({
                   type: card.type,
                   array:
                     pathname === '/create-your-own' ? defaultColors : variants,
                 })
-              )
-            }
+              );
+              dispatch(totalIncrement({ color: Number(card.price) }));
+            }}
           >
             <img src={card.photo} alt='' />
             <p>+£ {card.price}</p>

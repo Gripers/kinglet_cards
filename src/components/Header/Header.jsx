@@ -41,9 +41,9 @@ const Header = () => {
         ))}
       </ReactOwlCarousel>
       <div className={styles.header__carousel_item_btns}>
-        <Link to='/create-your-own'>
+        <a href='/create-your-own'>
           <button>Create your own</button>
-        </Link>
+        </a>
         <Link to='/popular-designs'>
           <button>Browse Pre-Made Designs</button>
         </Link>

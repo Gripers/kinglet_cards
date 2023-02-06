@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-import { API } from '../../api/Api';
+import { API } from '../../api/api';
 
 export const variantsApi = createAsyncThunk(
   'variants/variantsApi',

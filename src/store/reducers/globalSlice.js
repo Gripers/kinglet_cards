@@ -5,7 +5,7 @@ const globalSlice = createSlice({
   initialState: {
     isCheckoutModalOpen: false,
     isConfirmModalOpen: false,
-    totalPrice: 160,
+    totalPrice: 49.9,
   },
   reducers: {
     checkoutModalState: (state, action) => {
@@ -15,13 +15,6 @@ const globalSlice = createSlice({
       state.isConfirmModalOpen = action.payload;
     },
     totalIncrement: (state, action) => {
-      if (action.payload.border) {
-        state.totalPrice = 165;
-      } else if (action.payload.color) {
-        state.totalPrice = 175;
-      } else {
-        state.totalPrice = 160;
-      }
     },
   },
 });
