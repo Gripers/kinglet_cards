@@ -9,6 +9,7 @@ import { variantsApi } from '../../store/reducers/variantsSlice';
 import Navbar from '../../components/Navbar/Navbar';
 import Configurator from '../../components/Configurator/Configurator';
 import Cards from '../../components/Cards/Cards';
+import CheckoutBtn from '../../components/Checkout/CheckoutBtn';
 
 const CreateOwn = () => {
   const params = useParams();
@@ -30,6 +31,7 @@ const CreateOwn = () => {
       <div className='createown__wrapper'>
         <Cards obj={currentCart} />
         <Configurator />
+        <CheckoutBtn />
       </div>
     </>
   );

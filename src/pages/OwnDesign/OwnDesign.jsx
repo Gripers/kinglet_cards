@@ -1,15 +1,13 @@
 import styles from './OwnDesign.module.scss';
 
-import { useDispatch, useSelector } from 'react-redux';
-
-import { checkoutModalState } from '../../store/reducers/globalSlice';
+import { useSelector } from 'react-redux';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Configurator from '../../components/Configurator/Configurator';
 import Cards from '../../components/Cards/Cards';
+import CheckoutBtn from '../../components/Checkout/CheckoutBtn';
 
 const OwnDesign = () => {
-  const dispatch = useDispatch();
   const { totalPrice } = useSelector((state) => state.global);
 
   return (
@@ -19,11 +17,7 @@ const OwnDesign = () => {
         <Cards />
         <Configurator />
         <h2 className={styles.total}>Total: {totalPrice}</h2>
-        <div className={styles.btn}>
-          <button onClick={() => dispatch(checkoutModalState(true))}>
-            Checkout
-          </button>
-        </div>
+        <CheckoutBtn />
       </div>
     </>
   );

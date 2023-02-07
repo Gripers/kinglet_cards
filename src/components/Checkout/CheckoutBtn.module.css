@@ -1,0 +1,14 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn button {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(276deg, #523a2b, #3e2f26, #523a2b);
+  font-size: 16px !important;
+  padding: 16px;
+}
