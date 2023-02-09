@@ -13,7 +13,7 @@ const ConfirmModal = ({ formData }) => {
 
   return (
     <Modal open={isConfirmModalOpen}>
-      <ModalDialog style={{ width: '80%' }}>
+      <ModalDialog className='cus_modal'>
         <div className={styles.wrapper}>
           <ModalsHeader close={confirmModalState} active='sec' />
           <div className={styles.body}>

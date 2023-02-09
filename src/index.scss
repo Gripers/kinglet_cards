@@ -99,6 +99,16 @@ input[type='button'] {
   cursor: pointer;
 }
 
+.cus_modal {
+  width: 80% !important;
+}
+
+@media all and (max-width: 1000px) {
+  .cus_modal {
+    width: 95% !important;
+  }
+}
+
 @media (max-width: 1550px) and (min-width: 1536px) {
   .container {
     padding: 0 30px;

@@ -15,6 +15,7 @@ const globalSlice = createSlice({
       state.isConfirmModalOpen = action.payload;
     },
     totalIncrement: (state, action) => {
+      
     },
   },
 });

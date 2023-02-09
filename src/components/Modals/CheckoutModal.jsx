@@ -33,7 +33,7 @@ const CheckoutModal = () => {
   return (
     <>
       <Modal open={isCheckoutModalOpen}>
-        <ModalDialog style={{ width: '80%' }}>
+        <ModalDialog className='cus_modal'>
           <div className={styles.wrapper}>
             <ModalsHeader close={checkoutModalState} active='fst' />
             <form autoComplete='on' onSubmit={handleSubmit}>
