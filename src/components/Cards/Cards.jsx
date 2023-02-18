@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useRef } from 'react';
 import styles from './Cards.module.scss';
 
 import { useSelector } from 'react-redux';
@@ -8,8 +8,9 @@ import Draggable from 'react-draggable';
 import bg from '../../assets/images/metal/black.png';
 import chip from '../../assets/icons/chip.png';
 
+
 const Cards = ({ obj }) => {
-  const { name, text, namePosition, minDataPosition } = useContext(Context);
+  const { name, text, namePosition, minDataPosition, cardRef } = useContext(Context);
 
   const { isBigChip, border } = useSelector((state) => state.configurator);
   const { variant } = useSelector((state) => state.variants);
@@ -35,6 +36,7 @@ const Cards = ({ obj }) => {
   return (
     <div className={styles.own__design_cards}>
       <div
+        ref={cardRef}     
         id='card'
         className={styles.own__design_cards_card}
         style={{

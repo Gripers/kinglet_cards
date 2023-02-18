@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import Base from './components/Configurator/Base/Base';
 import { toast } from 'react-toastify';
@@ -27,6 +27,7 @@ const ContextProvider = ({ children }) => {
   const [emailCon, setEmailCon] = useState('');
   const [whatsappNum, setWhatsappNum] = useState('');
   const [feedback, setFeedback] = useState('');
+  const cardRef = useRef();
 
   useEffect(() => {
     axios
@@ -173,6 +174,7 @@ const ContextProvider = ({ children }) => {
         setWhatsappNum,
         feedback,
         setFeedback,
+        cardRef,
       }}
     >
       {children}

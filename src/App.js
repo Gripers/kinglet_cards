@@ -42,7 +42,7 @@ function App() {
         <Route path='/contact-us' element={<Contact />} loading={true} />
         <Route path='/create-your-own' element={<OwnDesign />} loading={true} />
         <Route
-          path='/create-your-own/:title'
+          path='/create-your-own/:name'
           element={<CreateOwn />}
           loading={true}
         />

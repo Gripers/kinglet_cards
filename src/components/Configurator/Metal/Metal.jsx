@@ -27,7 +27,6 @@ const Metal = () => {
             key={card.id}
             style={{ border: card?.type === '' ? '5px solid white' : null }}
             onClick={() => {
-              console.log(card.price);
               dispatch(
                 changeVariant({
                   type: card.type,
