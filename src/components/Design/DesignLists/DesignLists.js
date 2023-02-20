@@ -40,14 +40,14 @@ const DesignLists = () => {
       <div className='carts_div'>
         <div className='carts_inner'>
           {cards.map((el) => (
-            <Link to={`/create-your-own/${el.name}`} key={el.id}>
+            <a href={`/create-your-own/${el.name}`} key={el.id}>
               <div
                 className='cart'
                 style={{ backgroundImage: `url(${el.front_image})` }}
               >
                 <img className='chip' src={chip} alt='' />
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

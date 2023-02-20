@@ -8,7 +8,7 @@ import Cards from '../../components/Cards/Cards';
 import CheckoutBtn from '../../components/Checkout/CheckoutBtn';
 
 const OwnDesign = () => {
-  const { totalPrice } = useSelector((state) => state.global);
+  const { inc } = useSelector((state) => state.global);
 
   return (
     <>
@@ -16,7 +16,7 @@ const OwnDesign = () => {
       <div className={styles.own__design_wrapper}>
         <Cards />
         <Configurator />
-        <h2 className={styles.total}>Total: {totalPrice}</h2>
+        <h2 className={styles.total}>Total: {49.9 + inc}</h2>
         <CheckoutBtn />
       </div>
     </>

@@ -18,7 +18,7 @@ const CreateOwn = () => {
   const { cards } = useContext(Context);
 
   const currentCart = cards.find((el) => {
-    return el.title == params.title;
+    return el.name == params.name;
   });
 
   useEffect(() => {
