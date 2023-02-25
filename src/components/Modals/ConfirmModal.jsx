@@ -3,29 +3,39 @@ import styles from './modals.module.scss';
 
 import { Modal, ModalDialog } from '@mui/joy';
 import { useDispatch, useSelector } from 'react-redux';
-import { toBlob, toCanvas, toJpeg, toPng } from 'html-to-image';
+import { toBlob } from 'html-to-image';
 import axios from 'axios';
 
 import { confirmModalState } from '../../store/reducers/globalSlice';
 import { switchToCheckout } from '../../nn';
-import ModalsHeader from './ModalsHeader/ModalsHeader';
 import { Context } from '../../context';
+import { API } from '../../api/api';
+import ModalsHeader from './ModalsHeader/ModalsHeader';
 
 const ConfirmModal = ({ formData }) => {
   const dispatch = useDispatch();
   const { isConfirmModalOpen } = useSelector((state) => state.global);
   const { cardRef } = useContext(Context);
 
-  const request = useCallback(() => {
-    toBlob(cardRef.current, { cacheBust: true }).then((dataUrl) => {
-      console.log(dataUrl);
+  const request = useCallback(async (formData) => {
+    const data = new FormData();
 
-      const data = new FormData();
-
+    await toBlob(cardRef.current, { cacheBust: true }).then((dataUrl) => {
       data.append('image', dataUrl, 'pic.jpg');
-
-      axios.post('https://api.kingletcards.com/api/card-images/', data);
     });
+
+    data.append('name', formData.name);
+    data.append('country', formData.country);
+    data.append('city', formData.city);
+    data.append('email', formData.email);
+    data.append('whatsapp_number', formData.whatsapp_number);
+    data.append('state', formData.state);
+    data.append('postal', formData.postal);
+    data.append('address', formData.address);
+    data.append('shipping', formData.shipping);
+    data.append('method', formData.method);
+
+    axios.post(`${API}Orders/`, data);
   }, [cardRef]);
 
   return (
@@ -43,6 +53,8 @@ const ConfirmModal = ({ formData }) => {
                 <li>{formData.state}</li>
                 <li>{formData.city}</li>
                 <li>{formData.postal}</li>
+                <li>{formData.whatsapp_number}</li>
+                <li>{formData.shipping}</li>
                 <li>{formData.address}</li>
               </ul>
             </div>
@@ -51,7 +63,7 @@ const ConfirmModal = ({ formData }) => {
               <input
                 type='button'
                 value='Proceed to payment'
-                onClick={request}
+                onClick={() => request(formData)}
               />
             </div>
           </div>

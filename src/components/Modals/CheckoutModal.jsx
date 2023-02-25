@@ -24,7 +24,9 @@ const CheckoutModal = () => {
       state: event.target[3].value,
       city: event.target[4].value,
       postal: event.target[5].value,
-      address: event.target[6].value,
+      whatsapp_number: event.target[6].value,
+      shipping: event.target[7].value,
+      address: event.target[8].value,
     });
 
     switchToConfirm(event, dispatch);
@@ -60,6 +62,14 @@ const CheckoutModal = () => {
               <div>
                 <label htmlFor='postal/zip'>Postal/Zip Code</label>
                 <input type='text' id='postal/zip' required={true} />
+              </div>
+              <div>
+                <label htmlFor='whatsapp_number'>WhatsApp Number</label>
+                <input type='text' id='whatsapp_number' required={true} />
+              </div>
+              <div>
+                <label htmlFor='shipping'>Shipping</label>
+                <input type='text' id='shipping' required={true} />
               </div>
               <div>
                 <label htmlFor='address'>Address</label>
